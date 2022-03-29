@@ -1,10 +1,47 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="output" path="bin"/>
-</classpath>
+package entities;
+
+public class Funcionario {
+	private Integer numero;
+	private String nome;
+	private Double salario;
+	public Funcionario(Integer numero, String nome, Double salario) {
+		super();
+		this.numero = numero;
+		this.nome = nome;
+		this.salario = salario;
+	}
+	public Integer getNumero() {
+		return numero;
+	}
+	public void setNumero(Integer numero) {
+		this.numero = numero;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public Double getSalario() {
+		return salario;
+	}
+	public void setSalario(Double salario) {
+		this.salario = salario;
+	}
+	
+	public void incrementoDeSalario( double porcentage) {
+		salario += + salario * porcentage / 100.0;
+		
+	}
+	
+	public String toString() {
+		return numero
+			   + ", "
+			   + nome
+			   + ", "
+			   + String.format("%.2f", salario);
+		
+	}
+	
+
+}
